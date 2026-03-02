@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    text-align: center;
+    background-color: white; /* fixed Solid white */
+    font-family: Arial;
+    margin: 0;
+}
+
+/* Navigation buttons container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px;
+}
+
+.box {
+    flex: 1 1 200px;
+    max-width: 200px;
+    background-color: #2c3e50; /* dark button color */
+    padding: 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.box a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.box:hover{
+    background-color: #34495e;
+    transform: scale(1.05);
+}
+
+/* Profile image */
+img{
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Lists */
+ul{
+    list-style-position: inside;
+    display: inline-block;
+    text-align: left;
+    padding: 0;
+}
+</style>
+</head>
+
+<body>
+
+<h1>MY PROFILE</h1>
+
+<div class="container">
+    <div class="box"><a href="Index.html">Home Page</a></div>
+    <div class="box"><a href="Profile.html">Profile</a></div>
+    <div class="box"><a href="Gallery.html">Gallery</a></div>
+    <div class="box"><a href="Hobby.html">Hobby</a></div>
+</div>
+
+<img src="img_boy.jpg" alt="Boy cool" width="205" height="210">
+
+<hr>
+<h1>ABOUT ME</h1>
+<hr>
+
+<h2>DETAILS</h2>
+<p><b>NAME:</b> Castro, Gian Andrei B.</p>
+<p><b>POSITION:</b> Student</p>
+<p><b>CITY ADDRESS:</b>  Iloilo City</p>
+<p><b>BIRTHDATE:</b> June 26, 2010</p>
+<p><b>EMAIL:</b> gianandrei59@gmail.com</p>
+<hr>
+
+<section>
+<h3>LIKES & DISLIKES</h3>
+
+<p><b>LIKES:</b></p>
+<ul>
+<li>Very good personality</li>
+<li>Listening to musics</li>
+<li>Respectful</li>
+</ul>
+
+<p><b>DISLIKES:</b></p>
+<ul>
+<li>Okra</li>
+<li>Spiders</li>
+<li>Not respectful</li>
+</ul>
+</section>
+
+<hr>
+
+<section>
+<h4>MY TOP 3 FAVORITE WEBSITES</h4>
+<p><a href="https://open.spotify.com/">Spotify</a></p>
+<p><a href="https://discord.com/app">Discord</a></p>
+<p><a href="https://www.tiktok.com/">TikTok</a></p>
+</section>
+<hr>
+
+<section>
+<h5>MY FAVORITE Beta Squad VIDEO!</h5>
+<p>LAST TO LEAVE THE GROCERY STORE FT AMP</p>
+
+<video width="320" height="240" controls>
+<source src="https://youtu.be/J7exm02NVHo?si=bbOkPHtD_44OKt7C" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</section>
+<h6>END</h6>
+<hr>
+
+</body>
+</html>

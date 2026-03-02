@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Profile</title>
+
+<style>
+body{
+    text-align: center;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin-top: 30px;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px;
+}
+
+.box {
+    flex: 1 1 180px;
+    max-width: 200px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.box a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.box:hover{
+    transform: translateY(-5px);
+    background-color: #ffe0cc;
+}
+
+.section{
+    background: white;
+    margin: 20px auto;
+    padding: 25px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    margin: 8px 0;
+}
+
+hr{
+    width: 60%;
+}
+</style>
+</head>
+
+<body>
+
+<h1>MY PROFILE</h1>
+
+<div class="container">
+    <div class="box"><a href="index.html">Home Page</a></div>
+    <div class="box"><a href="profile.html">Profile</a></div>
+    <div class="box"><a href="gallery.html">Gallery</a></div>
+    <div class="box"><a href="hobby.html">Hobby</a></div>
+</div>
+
+<h1>WHAT MAKES ME BUSY</h1>
+<h3>I have two points: first is my routine and second is my hobby</h3>
+
+<div class="section">
+    <h2>ROUTINE</h2>
+    <ul>
+        <li>I wake up then look at my phone</li>
+        <li>Eat breakfast</li>
+        <li>Brush my teeth</li>
+        <li>Get ready for the day ahead</li>
+        <li>Pray and say goodnight to my parents before going to bed</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>HOBBY</h2>
+    <ul>
+        <li>Driving a motorcycle</li>
+        <li>Jamming with my friends</li>
+        <li>Playing games</li>
+    </ul>
+</div>
+
+</body>
+</html>
