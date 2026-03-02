@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to My Main Home Page!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffe6f0, #ffc1e3, #ffb3c6);
+            text-align: center;
+            margin: 0;
+            padding: 60px 20px;
+            color: #4d0033;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        
+        .sticker {
+            position: absolute;
+            width: 60px;
+            animation: float 10s ease-in-out infinite;
+            opacity: 0.85;
+        }
+
+        .sticker:nth-child(1) { top: 8%; left: 5%; animation-delay: 0s; }
+        .sticker:nth-child(2) { top: 18%; right: 12%; animation-delay: 2s; }
+        .sticker:nth-child(3) { bottom: 20%; left: 15%; animation-delay: 4s; }
+        .sticker:nth-child(4) { bottom: 12%; right: 20%; animation-delay: 6s; }
+        .sticker:nth-child(5) { top: 50%; left: 50%; animation-delay: 8s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-25px) rotate(10deg); }
+        }
+
+        h1 {
+            font-size: 52px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #d81b60;
+            text-shadow: 2px 2px 6px rgba(255,255,255,0.6), 0 0 15px rgba(255,192,203,0.5);
+        }
+
+        h2, h3, h4, h5, h6 {
+            color: #c2185b;
+            text-shadow: 1px 1px 4px rgba(255,255,255,0.5);
+        }
+
+        a { text-decoration: none; color: #ff4081; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+
+        .container { width: 70%; margin: auto; }
+
+        .box {
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            font-family: 'Brush Script MT', cursive;
+            box-shadow: 0 6px 25px rgba(255,105,180,0.4), 0 0 15px rgba(255,182,193,0.5);
+        }
+
+        .box:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 35px rgba(255,105,180,0.6), 0 0 25px rgba(255,182,193,0.8);
+        }
+
+        .profile { background: linear-gradient(135deg, #FF69B4, #FF85C0); }
+        .gallery { background: linear-gradient(135deg, #FF1493, #FF69B4); }
+        .hobby { background: linear-gradient(135deg, #F8BBD0, #FF80AB); color: black; }
+
+        .desc { margin: 5px 0 20px; font-size: 18px; color: #4d0033; }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            max-width: 700px;
+            margin: 10px auto 40px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.6;
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(255,105,180,0.3), 0 0 20px rgba(255,182,193,0.2);
+            padding: 25px 35px;
+        }
+
+        li { margin-bottom: 10px; }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(to right, #ff80ab, #ff4081, #F06292);
+            margin: 50px auto;
+            width: 80%;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(255,105,180,0.5);
+        }
+
+        img.content-img {
+            margin: 20px 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(255,105,180,0.3), 0 0 25px rgba(255,182,193,0.5);
+            max-width: 90%;
+            height: auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img.content-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(255,105,180,0.5), 0 0 35px rgba(255,182,193,0.7);
+        }
+
+        iframe {
+            display: block;
+            margin: 25px auto 50px;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(255,105,180,0.3), 0 0 25px rgba(255,182,193,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        iframe:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 40px rgba(255,105,180,0.5), 0 0 35px rgba(255,182,193,0.6);
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <h1>Table of Contents</h1>
+
+    <div class="container">
+        <a href="profile.html">
+            <div class="box profile">🦩 Profile 🦩</div>
+        </a>
+        <p class="desc">About me and more personal details!</p>
+
+        <a href="gallery.html">
+            <div class="box gallery">🌸 Gallery 🌸</div>
+        </a>
+        <p class="desc">Contains photos of what I like!</p>
+
+        <a href="HOBBY.html">
+            <div class="box hobby">💗 Hobby 💗</div>
+        </a>
+        <p class="desc">My hobbies and routine!</p>
+    </div>
+
+    <hr/>
+
+    <h1>I LOVE PINK!!</h1>
+
+    <h2>What Pink Symbolizes</h2>
+    <p>Pink is often associated with feelings of love, warmth, calmness, and nurturing. Learn more from the links below.</p>
+
+    <h3>Explore Pink Shades</h3>
+    <a href="https://www.color-meanings.com/pink-color-meaning-the-color-pink/" target="_blank">Pink Color Meaning - Color Meanings</a><br/>
+    <a href="https://www.colorpsychology.org/pink/" target="_blank">Pink Color Psychology - Color Psychology</a><br/>
+    <a href="https://www.shutterstock.com/blog/pink-color-meaning" target="blank">Pink Color Meaning - Shutterstock Blog</a><br/>
+
+    <h4>Common Associations with Pink:</h4>
+    <ul>
+        <li>Love and Romance</li>
+        <li>Compassion and Kindness</li>
+        <li>Femininity</li>
+        <li>Playfulness</li>
+        <li>Innocence</li>
+    </ul>
+
+    
+    <img class="content-img" src="https://tse3.mm.bing.net/th/id/OIP.6W2BoS-FZuxPXemCLArb3wHaFj?pid=Api" alt="Pink Color Meaning Infographic"/>
+
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OpgajFn5IBE"
+        title="Pink Color Meanings in Psychology" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+</body>
+</html>
