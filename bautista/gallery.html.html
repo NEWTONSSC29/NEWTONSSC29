@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Visual Gallery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f3f0ff;
+  text-align: center;
+  padding: 50px 20px;
+  color: #5e548e;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #7b68b3;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 40px;
+  color: #988fc7;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.gallery img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 40px;
+  text-decoration: none;
+  background-color: #e6e0ff;
+  padding: 12px 28px;
+  border-radius: 25px;
+  color: #5e548e;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #d6ccff;
+  transform: translateY(-2px);
+}
+</style>
+</head>
+
+<body>
+
+<h1>Visual Gallery</h1>
+<p class="subtitle">Fun memories with my friends ✨</p>
+
+<div class="gallery">
+  <img src="https://scontent.fcgy2-4.fna.fbcdn.net/v/t39.30808-6/643877741_3337068216460238_7279843482530656576_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeGeXiu3lN9nO1JGdsThTRE8H07UJJqiRbMfTtQkmqJFsycjFuxouyJXrfzWSf-v81j-S6T1yIkhZLn4mLAyBofo&_nc_ohc=cbGoZC9z5jwQ7kNvwGv4EuW&_nc_oc=AdlZ92-KsmSSuzp6sc2AizkE9O_1CQWu6CNBkHBo4-v53KUkA6X099Ejtwwlj8OMeVA&_nc_zt=23&_nc_ht=scontent.fcgy2-4.fna&_nc_gid=9c5LtybvqAvP-3pjOIWG1g&_nc_ss=8&oh=00_Afura8-KLJm-suOYVx_kplTYgN0Rg_boYCSIMjjEfV4gCQ&oe=69A892A9" alt="Gallery Image 1">
+  
+  <img src="https://scontent.fcgy2-4.fna.fbcdn.net/v/t39.30808-6/644314832_3337068273126899_1346374162288781711_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeGKK7SjQhViWFcvTMVgf9ZcG4RBvugEA_EbhEG-6AQD8Q1HZPGjwEc8Dm0DXZ5LQJXInzbsd0qUgxB4qknsKUW_&_nc_ohc=2Vtf3cSpAVAQ7kNvwHySebE&_nc_oc=AdlGa6nMPeSTJ5re0QtGKUMF4KOLMUghmnXxZQZddzD4nUDRnCZ7APmlx5yciwR2wPI&_nc_zt=23&_nc_ht=scontent.fcgy2-4.fna&_nc_gid=p_-_mPRUYRaLwNm8tJwK-Q&_nc_ss=8&oh=00_AfvsyOg_6JgyyC9FjME_WZaNAcyi88N1xGBPSMSESTMw8A&oe=69A8984A" alt="Gallery Image 2">
+  
+  <img src="https://scontent.fcgy2-1.fna.fbcdn.net/v/t39.30808-6/643923161_3337068379793555_5611079870998542152_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeEJyJ1H5tu9giJeZ9h2eujIrfM_9C963qCt8z_0L3reoEP72NsJly6hACxxjK_R2C5_qdbnYNhFjZBm5hcKzMz0&_nc_ohc=74FZsp6IFUMQ7kNvwGyhYrG&_nc_oc=Adm25bO48U_KCNQH3jMpCIhcUN_ilyvvsiy8HhtLZZNBE2eABXgYNvcCqPGi49DbjDI&_nc_zt=23&_nc_ht=scontent.fcgy2-1.fna&_nc_gid=8h1Xyurp6seRVRvTrW_2HA&_nc_ss=8&oh=00_Aftmp9d3onh8H8rd4Jas40mPzIhJa60BnfXFDxvB_tcIFg&oe=69A89560" alt="Gallery Image 3">
+  
+  <img src="https://scontent.fcgy2-4.fna.fbcdn.net/v/t39.30808-6/643880529_3337068563126870_6178551238210472674_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeEvvf31cTKU3U6IfQflfQNZJ1E35vgt97snUTfm-C33u3yN4pP69URD2HPy6zwztsLq5boGEyfj5cRngL4vplyo&_nc_ohc=cHyY_wDjSW0Q7kNvwE6xcI_&_nc_oc=AdlyzsxBWg6ANOvn9gNx2GIC2OXlk-t3cDmEMAzZWK-BV_VlVQ_4t0kHwp2pc_lVwOo&_nc_zt=23&_nc_ht=scontent.fcgy2-4.fna&_nc_gid=AV0qfx0trD-enZCGtfkqMA&_nc_ss=8&oh=00_AfvEZOA3eFBCImmomluFylJtK1XGlTUx8WIsn6nyyvS2ww&oe=69A898D3" alt="Gallery Image 4">
+  
+  <img src="https://scontent.fcgy2-1.fna.fbcdn.net/v/t39.30808-6/643996019_3337068653126861_7436447294242447786_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeHj3cYdFin5l0SXISMRLBZmaT53ydNUgcNpPnfJ01SBw9M-yY26UUYSm-rrtCwJCPEZRYQrgAXHACZmDM-o3y42&_nc_ohc=09Dpc_a6nK0Q7kNvwFi4pOQ&_nc_oc=Adm-fXCNrO1Gf3xQkVhZw9wEo2hM42cxxdgIC1MXlMAd8bALPE_eHlvbTMTZ8jJ1PPo&_nc_zt=23&_nc_ht=scontent.fcgy2-1.fna&_nc_gid=9tB0joiS9lKwz0xls4dOEQ&_nc_ss=8&oh=00_Afuf0eJZFVl0Y2FHwHnzIVpC1-uOnDnu8cBcMns-xU5f-Q&oe=69A8B78D" alt="Gallery Image 5">
+  
+  <img src="https://scontent.fcgy2-2.fna.fbcdn.net/v/t39.30808-6/644360431_3337068736460186_5182132919232233419_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeGROmlJlnFFuVnTpKA8v2As54_0GOMyaAvnj_QY4zJoC8DvciOF8Mxu-kj-_ckWKnFcQ7IWECy0O4BpnFM5iVue&_nc_ohc=G_cwGQvMaGoQ7kNvwFuHiJP&_nc_oc=AdmuNMRo4ZeoeNO0qRWADtPp6NF4hRirnQbGbSmj_lqituCFM8X_EIazho8gZ3PaIm8&_nc_zt=23&_nc_ht=scontent.fcgy2-2.fna&_nc_gid=S6iMgJI2vywjfF8ufL-7uw&_nc_ss=8&oh=00_AfsiEPnAMo3IiI_JNV7iosjdxucsVWt7PHS2prO8Uo19AA&oe=69A8B89C" alt="Gallery Image 6">
+</div>
+
+<a href="index.html" class="back-btn">← Back to Main Hub</a>
+
+</body>
+</html>
