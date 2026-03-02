@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Visual Gallery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: red; /* changed background to red */
+  text-align: center;
+  padding: 50px 20px;
+  color: #ffffff; /* text color changed for better contrast */
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #fffacd; /* lighter color for contrast */
+}
+
+.subtitle {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 40px;
+  color: #ffe4e1; /* softer color for subtitle */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.gallery img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 40px;
+  text-decoration: none;
+  background-color: #fff0f5; /* light color to stand out on red */
+  padding: 12px 28px;
+  border-radius: 25px;
+  color: #5e548e;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #ffe4e1;
+  transform: translateY(-2px);
+}
+</style>
+</head>
+
+<body>
+
+<h1>Visual Gallery</h1>
+<p class="subtitle">Fun memories with my friends ✨</p>
+
+<div class="gallery">
+  <img src="image1.jpg" alt="Gallery Image 1">
+  <img src="image2.jpg" alt="Gallery Image 2">
+  <img src="image3.jpg" alt="Gallery Image 3">
+  <img src="image4.jpg" alt="Gallery Image 4">
+  <img src="image5.jpg" alt="Gallery Image 5">
+</div>
+
+<a href="index.html" class="back-btn">← Back to Main Hub</a>
+
+</body>
+</html>
