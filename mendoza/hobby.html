@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondstadt Journal | Traveler's Logs</title>
+  <style>
+    
+    :root {
+      --anemo-primary: #64cbd0;
+      --anemo-glow: rgba(100, 203, 208, 0.4);
+      --gold-accent: #ece5d8;
+      --gold-border: #d3bc8e;
+      --dark-stone: #393b40;
+      --parchment-bg: #f0ebe0;
+      --card-bg: rgba(255, 255, 255, 0.7);
+    }
+
+    body {
+      background: url('https://wallpaperaccess.com/full/4156176.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: var(--dark-stone);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+   
+    .quest-board {
+      background-color: var(--parchment-bg);
+      width: 90%;
+      max-width: 1000px;
+      border: 3px solid var(--gold-border);
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 20px;
+    }
+
+   
+    header {
+      background: var(--dark-stone);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--gold-border);
+    }
+
+    header h1 {
+      color: var(--gold-border);
+      margin: 0;
+      font-variant: small-caps;
+      letter-spacing: 3px;
+      font-size: 1.5rem;
+    }
+
+    
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      padding: 30px;
+    }
+
+   
+    .card-section {
+      background: var(--card-bg);
+      border: 1px solid var(--gold-border);
+      border-radius: 5px;
+      padding: 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    h3 {
+      border-bottom: 2px solid var(--anemo-primary);
+      display: inline-block;
+      margin-top: 0;
+      color: #2c5d61;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th {
+      text-align: left;
+      color: var(--anemo-primary);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      padding: 10px;
+    }
+
+    td {
+      padding: 12px 10px;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      font-size: 0.95rem;
+    }
+
+  
+    .hobby-stat {
+      margin-bottom: 15px;
+    }
+
+    .stat-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+    .bar-bg {
+      background: #ccc;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--anemo-primary), #fff);
+      box-shadow: 0 0 10px var(--anemo-glow);
+    }
+
+    
+    .glossary {
+      grid-column: span 2;
+      background: rgba(57, 59, 64, 0.05);
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    dt { font-weight: bold; color: #4a8d91; }
+    dd { margin-bottom: 10px; font-style: italic; }
+
+   
+    footer {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .btn-back {
+      background: var(--dark-stone);
+      color: var(--gold-border);
+      padding: 10px 25px;
+      text-decoration: none;
+      border: 1px solid var(--gold-border);
+      border-radius: 20px;
+      transition: all 0.3s;
+    }
+
+    .btn-back:hover {
+      background: var(--gold-border);
+      color: var(--dark-stone);
+      box-shadow: 0 0 15px var(--gold-border);
+    }
+
+  
+    .vision-circle {
+      width: 50px;
+      height: 50px;
+      background: var(--anemo-primary);
+      border-radius: 50%;
+      border: 3px solid var(--gold-border);
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 20px var(--anemo-primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quest-board">
+    <div class="vision-circle">✦</div>
+    
+    <header>
+      <h1>Traveler's Log: Mondstadt</h1>
+      <div style="color: white; font-size: 0.8rem;">AR 60 | World Level 8</div>
+    </header>
+
+    <div class="content-grid">
+      
+      <section class="card-section">
+        <h3>Daily Commission Log</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Morning Cycle</th>
+              <th>Night Cycle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Wake up</td><td>Do homework</td></tr>
+            <tr><td>Take a shower</td><td>Do tasks</td></tr>
+            <tr><td>Skincare Regime</td><td>Play Genshin Impact</td></tr>
+            <tr><td>Brush teeth</td><td>Night Skincare</td></tr>
+            <tr><td>Online Gaming</td><td>Log off (Sleep)</td></tr>
+            <tr><td>Sketching</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card-section">
+        <h3>Ascension Hobbies</h3>
+        
+        <div class="hobby-stat">
+          <div class="stat-label"><span>Cleaning</span><span>LVL 80</span></div>
+          <div class="bar-bg"><div class="bar-fill" style="width: 80%;"></div></div>
+        </div>
+
+        <div class="hobby-stat">
+          <div class="stat-label"><span>Gaming</span><span>LVL 90</span></div>
+          <div class="bar-bg"><div class="bar-fill" style="width: 95%;"></div></div>
+        </div>
+
+        <div class="hobby-stat">
+          <div class="stat-label"><span>Sketching</span><span>LVL 75</span></div>
+          <div class="bar-bg"><div class="bar-fill" style="width: 75%;"></div></div>
+        </div>
+
+        <div class="hobby-stat">
+          <div class="stat-label"><span>Crochet</span><span>LVL 50</span></div>
+          <div class="bar-bg"><div class="bar-fill" style="width: 50%;"></div></div>
+        </div>
+      </section>
+
+      <section class="glossary">
+        <dl>
+          <dt>✦ Routine</dt>
+          <dd>The repetitive sequence of actions that grants 100% Efficiency Bonus.</dd>
+          <dt>✦ Hobby</dt>
+          <dd>Passive skills that increase Happiness Meter and reduce Fatigue.</dd>
+        </dl>
+      </section>
+
+      <section class="card-section" style="grid-column: span 2; text-align: center;">
+        <p>“Creativity <strong>doesn't wait,</strong> it inspires <em>innovation</em>.”</p>
+        <p style="font-size: 0.8rem; opacity: 0.7;">
+          Syncing <sub>creative_idea</sub>... Success! <br>
+          Buff active: <sup>inspiration⁺</sup>
+        </p>
+      </section>
+
+    </div>
+
+    <footer>
+      <hr style="border: 0; border-top: 1px solid var(--gold-border); margin-bottom: 20px;">
+      <a href="index.html" class="btn-back">Return </a>
+    </footer>
+  </div>
+
+</body>
+</html>
