@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | My Digital Space</title>
+    <style>
+        /* Modern Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;500&display=swap');
+
+        body {
+            background-color: #FFFDF0; /* Creamy White */
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertical Center */
+            align-items: center;     /* Horizontal Center */
+            min-height: 100vh;       /* Takes full screen height */
+            text-align: center;
+        }
+
+        /* Hero/Welcome Section */
+        .welcome-header {
+            margin-bottom: 40px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .welcome-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #B8860B; /* Dark Goldenrod for contrast */
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .welcome-header p {
+            font-style: italic;
+            color: #8B7355;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Container for the boxes */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        /* Golden Glass Boxes */
+        .box {
+            flex: 1 1 200px;
+            background: #FFD700; /* Rich Golden Yellow */
+            border-radius: 15px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #E6C200;
+            box-shadow: 0 10px 20px rgba(184, 134, 11, 0.1);
+            overflow: hidden; /* Ensures the link covers the whole rounded box */
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            background: #FFDF33;
+            box-shadow: 0 15px 30px rgba(184, 134, 11, 0.2);
+        }
+
+        /* Link Styling - Makes the whole box a button */
+        .box a {
+            display: block;
+            padding: 30px 20px;
+            text-decoration: none;
+            color: #5C4033; /* Dark Wood color for text */
+            font-weight: 500;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Distinct Style for the Back Button */
+        .back-button {
+            background: #FDF5E6; /* Old Lace color */
+            border: 1px dashed #B8860B;
+        }
+
+        .back-button a {
+            color: #8B7355;
+            font-size: 0.9rem;
+        }
+
+        /* Smooth Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile adjustment */
+        @media (max-width: 600px) {
+            .welcome-header h1 { font-size: 2rem; }
+            .container { flex-direction: column; width: 80%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-header">
+        <h1>Welcome to My Creative Corner</h1>
+        <p>Step inside to explore my world</p>
+    </div>
+
+    <div class="container">
+        <div class="box"><a href="profile.html">My Profile</a></div>
+        <div class="box"><a href="gallery.html">Visual Gallery</a></div>
+        <div class="box"><a href="hobby.html">Interests & Hobbies</a></div>
+        <div class="box back-button"><a href="newtonindex.html">← Back to Main Hub</a></div>
+    </div>
+
+</body>
+</html>
