@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Bry (˶˃𐃷˂˶)</title>
+    <style>
+        /* Base Page Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffd1df;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Profile Card Wrapper */
+        .profile-card {
+            background-color: #fff0f5;
+            border: 3px dashed #E83366;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px; /* Made slightly wider to fit bigger images */
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+            box-shadow: 0 10px 20px rgba(232, 51, 102, 0.2);
+            position: relative;
+        }
+
+        /* The Scrapbook Photo Look */
+        .photo-container {
+            flex-shrink: 0;
+        }
+
+        .profile-pic {
+            width: 220px;
+            height: 270px;
+            background-color: white;
+            padding: 10px 10px 40px 10px;
+            border-radius: 5px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            transform: rotate(-4deg);
+            border: 1px solid #ddd;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+
+        /* Right Side Content */
+        .details {
+            color: #AD254C;
+        }
+
+        .details h1 {
+            color: #E83366;
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #E83366;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 20px 25px; /* Increased gap for larger images */
+            font-size: 1.1rem;
+            align-items: center;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #E83366;
+        }
+
+        /* BIGGER STICKERS */
+        .sticker-img {
+            width: 60px; /* Increased from 35px */
+            height: 60px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 3px solid white;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .sticker-img:hover {
+            transform: scale(1.1) rotate(3deg); /* Fun hover effect */
+        }
+
+        .batch-sticker {
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .fav-container {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .bio-text {
+            margin-top: 25px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .sparkle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+        }
+
+        .back-home {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-decoration: none;
+            color: #E83366;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border-bottom: 2px solid #E83366;
+        }
+
+        @media (max-width: 650px) {
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+            .profile-pic {
+                transform: rotate(0deg);
+                margin-bottom: 20px;
+            }
+            .fav-container {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="sparkle">✧˖°.</div>
+        
+        <div class="photo-container">
+            <div class="profile-pic">
+                <img src="profile.jpeg" alt="Bry's Photo">
+            </div>
+        </div>
+
+        <div class="details">
+            <span class="status-badge">Jyne 🎀</span>
+            <h1>Welcome to my profile!!!!! ( ˶°ㅁ°)</h1>
+            
+            <div class="info-grid">
+                <div class="info-label">Name:</div>
+                <div>Jannelle Bryanna D. Buensuceso (˶˃𐃷˂˶)</div>
+                
+                <div class="info-label">Birthday:</div>
+                <div>05/27/2010</div>
+                
+                <div class="info-label">Council Position:</div>
+                <div>
+                    Board member, Minister of Clubs and Organizations
+                    <img src="cao.png" alt="Batch icon" class="sticker-img batch-sticker">
+                </div>
+                
+                <div class="info-label">Favorites:</div>
+                <div>
+                    <span>Batumbakal, SSC 29', and JHSSC 2526'</span>
+                    <div class="fav-container">
+                        <img src="batumbaks.png" alt="Batumbaks" class="sticker-img">
+                        <img src="ssc.png" alt="Newton" class="sticker-img">
+                        <img src="council.jpeg" alt="" class="sticker-img">
+                    </div>
+                </div>
+            </div>
+
+            <p class="bio-text">
+                "The hardest part wasn't losing you, it was learning how to live without you♱ —Bridge to Terabithia"
+            </p>
+        </div>
+
+        <a href="index.html" class="back-home">← Back to Index</a>
+    </div>
+<audio id="bgMusic" loop hidden>
+    <source src="tindahan.mp3" type="audio/mp3">
+
+
+</audio>
+</body>
+</html>

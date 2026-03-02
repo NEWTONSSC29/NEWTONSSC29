@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bry's Gallery (˶˃𐃷˂˶)</title>
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffd1df;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+            overflow-x: hidden;
+        }
+
+        .gallery-title {
+            color: #E83366;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 2px 2px white;
+        }
+
+
+        .scrapbook-container {
+            background-color: #fff0f5;
+            border: 3px dashed #E83366;
+            border-radius: 25px;
+            padding: 40px;
+            max-width: 1100px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            box-shadow: 0 10px 20px rgba(232, 51, 102, 0.2);
+            position: relative;
+        }
+
+
+        .photo-frame {
+            background-color: white;
+            padding: 12px 12px 45px 12px; /* Extra bottom padding for captions */
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+            cursor: pointer;
+            position: relative;
+            margin: 0;
+
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                        box-shadow 0.3s ease, 
+                        z-index 0s;
+            z-index: 1;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 1px solid #f0f0f0;
+            display: block;
+        }
+
+
+        .photo-frame figcaption {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-family: 'Brush Script MT', cursive, sans-serif;
+            color: #AD254C;
+            font-size: 1.1rem;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+
+        .photo-frame:nth-child(odd) { transform: rotate(-3deg); }
+        .photo-frame:nth-child(even) { transform: rotate(2deg); }
+        .photo-frame:nth-child(3n) { transform: rotate(4deg); }
+
+  
+        .photo-frame:hover {
+            transform: scale(1.15) rotate(0deg) translateY(-15px);
+            z-index: 50;
+            box-shadow: 0 25px 50px rgba(232, 51, 102, 0.4);
+            border-color: #E83366;
+        }
+
+        .photo-frame:hover figcaption {
+            opacity: 1;
+            font-weight: bold;
+        }
+
+        /* Footer Section */
+        footer {
+            margin-top: 40px;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            border: 2px solid #E83366;
+            color: #AD254C;
+            text-align: center;
+            max-width: 700px;
+            line-height: 1.6;
+            font-style: italic;
+            box-shadow: 4px 4px 0px #E83366;
+        }
+
+        .sparkle-decor { font-size: 1.5rem; margin: 10px; }
+
+        .back-home {
+            margin-top: 40px;
+            text-decoration: none;
+            color: #E83366;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #E83366;
+            transition: 0.2s;
+        }
+
+        .back-home:hover { letter-spacing: 1px; background-color: #fff0f5; }
+
+        @media (max-width: 600px) {
+            .scrapbook-container { padding: 20px; gap: 15px; }
+            .photo-frame { transform: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="gallery-title">Memory Lane ✧˖°.</h1>
+
+    <main class="scrapbook-container">
+        <figure class="photo-frame">
+            <img src="saka.jpeg" alt="Saka">
+            <figcaption>Abandoned truck </figcaption>
+        </figure>
+        
+        <figure class="photo-frame">
+            <img src="unitednations.jpeg" alt="UN">
+            <figcaption>United Nations</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="highschool.jpeg" alt="HS">
+            <figcaption>High School Musical</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="uweek.jpeg" alt="UWeek">
+            <figcaption>U week champion cuties!</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="parade.jpeg" alt="Parade">
+            <figcaption>Foot parade</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="research.jpeg" alt="Research">
+            <figcaption>Research :(</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="ssc.jpeg" alt="SSC">
+            <figcaption>SSC core</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="hangout.jpeg" alt="Hangout">
+            <figcaption>Tyangge</figcaption>
+        </figure>
+        <figure class="photo-frame">
+            <img src="r.jpeg" alt="Graduation">
+            <figcaption>Totga</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="reformrmr.jpeg" alt="Library">
+            <figcaption>Campaign season</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="batum.jpeg" alt="Sunset">
+            <figcaption>batumbakal</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="orange.jpeg" alt="Coffee">
+            <figcaption>Commute warriors</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="motherandfathet.jpeg" alt="Field Trip">
+            <figcaption>with honors g!</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="reserxh.jpeg" alt="Polaroids">
+            <figcaption>Keepers ♡</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="mibf.jpeg" alt="Birthday">
+            <figcaption>Sota Fukushi</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="daddy.jpeg" alt="Rainy Day">
+            <figcaption>Alabyu daddis</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="councill.jpeg" alt="Last Day">
+            <figcaption>Im gon miss this 💌</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="rinnyy.jpeg" alt="Rinny">
+            <figcaption>Rinny ✩</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="prom.jpeg" alt="Prom">
+            <figcaption>Prom =)</figcaption>
+        </figure>
+
+        <figure class="photo-frame">
+            <img src="my trio.jpeg" alt="Trio">
+            <figcaption>Trio <3
+            </figcaption>
+        </figure>
+    </main>
+
+    <footer>
+        <span class="sparkle-decor">그리워할 것이다</span>
+        <p>"Can't believe childhood is over..." —Little Women</p>
+        <span class="sparkle-decor">𓏲 ๋࣭ ࣪ ˖🎐</span>
+    </footer>
+
+    <a href="index.html" class="back-home">← Back to Index</a>
+
+    <audio id="bgMusic" loop hidden>
+        <source src="innocence.mp3" type="audio/mp3">
+    </audio>
+
+
+</body>
+</html>
