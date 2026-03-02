@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gallery | CPU JHS Life</title>
+
+<!-- Modern Font Upgrade -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: white;
+
+    /* Background Image with Dark Overlay */
+    background:
+        linear-gradient(rgba(15,15,15,0.85), rgba(15,15,15,0.9)),
+        url("https://i.postimg.cc/8cdtNxWH/557621108-1102393268771416-313027416886557933-n.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+p.subtitle {
+    color: #cccccc;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.thumb {
+    border-radius: 15px;
+    overflow: hidden;
+    height: 250px;
+    display: block;
+    border: 2px solid rgba(255,255,255,0.2);
+    transition: 0.3s ease;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumb:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+    border: 2px solid white;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.box-content {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    display: flex;
+    width: 90%;
+    max-width: 950px;
+    max-height: 85vh;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.box-img {
+    flex: 1.3;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.box-img img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.3);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+.box-text {
+    flex: 1;
+    padding: 40px;
+    text-align: left;
+    overflow-y: auto;
+    background: rgba(20,20,20,0.8);
+}
+
+.box-text h2 {
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+.box-text p {
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.close-btn:hover {
+    color: #aaaaaa;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 60px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.back-link:hover {
+    background: white;
+    color: black;
+}
+
+@media (max-width: 800px) {
+    .box-content {
+        flex-direction: column;
+        width: 95%;
+    }
+    .box-text {
+        padding: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1> LIFE AS A CENTRALIAN </h1>
+<p class="subtitle">Scientia et Fides: Excellence in Every Corner</p>
+
+<div class="gallery-grid">
+<a href="#pic1" class="thumb"><img src="https://i.postimg.cc/SN1gLnCT/557621108-1102393268771416-313027416886557933-n.jpg" alt="Campus"></a>
+<a href="#pic2" class="thumb"><img src="https://i.postimg.cc/ht67cd7s/20e9c61b-82c5-45d2-93b8-f98f73e54cca.jpg" alt="Friends"></a>
+<a href="#pic3" class="thumb"><img src="https://i.postimg.cc/ryHThN61/558899727-1110807191263357-5396791814907420390-n.jpg" alt="Activities"></a>
+<a href="#pic4" class="thumb"><img src="https://i.postimg.cc/SK5my4sc/0102c3f3-b405-440d-98a4-f89ab8d7c67d.jpg" alt="Education"></a>
+</div>
+
+ <!-- ================= PIC 1 ================= -->
+    <div id="pic1" class="lightbox">
+        <div class="box-content">
+            <a href="#" class="close-btn">&times;</a>
+
+            <div class="box-img">
+                <img src="https://i.postimg.cc/SN1gLnCT/557621108-1102393268771416-313027416886557933-n.jpg">
+            </div>
+
+            <div class="box-text">
+                <h2>The Centralian Feeling</h2>
+                <p>
+                    Life as a Centralian is defined by a unique harmony between academic rigor and a refreshing, natural atmosphere that few other urban universities can match. Beyond the classroom, you’ll find yourself immersed in the rich traditions of the CPU Republic, where the spirit of leadership and service is cultivated through one of the oldest student governments in the region. Whether you are finding a quiet "tambayan" under the ancient acacia trees to study for an exam or cheering at the top of your lungs during the high-energy competitions of University Day, the campus truly feels like a second home where faith and science walk hand in hand.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PIC 2 ================= -->
+    <div id="pic2" class="lightbox">
+        <div class="box-content">
+            <a href="#" class="close-btn">&times;</a>
+
+            <div class="box-img">
+                <img src="https://i.postimg.cc/dtn2P3BB/6d396b05-90ab-4c6e-9295-0fb415d76353.jpg">
+                <img src="https://i.postimg.cc/ht67cd7s/20e9c61b-82c5-45d2-93b8-f98f73e54cca.jpg">
+            </div>
+
+            <div class="box-text">
+                <h2>SSC ALL ABOARD</h2>
+                <p>
+                    The Special Science Class (SSC) offers an accelerated and research-driven curriculum
+                    designed to push our limits in Math and Science.
+                </p>
+                <p>
+                    Being a student in the Special Science Class (SSC) at Central Philippine University is a journey of both academic intensity and profound personal growth. This specialized program is designed for the university's most driven learners, pushing us to master an enriched curriculum that features advanced mathematics and research-heavy sciences far beyond the standard requirements. Within the walls of our laboratories and the shade of the campus trees, we don't just study theories; we engage in original scientific inquiry and rigorous problem-solving that prepares us for the challenges of higher education and innovation.
+
+The true heart of the SSC experience, however, lies in the four-year story shared with a consistent group of classmates who quickly transition from peers to family. Over these years, we have evolved from competitive freshmen into a unified team, bonded by the shared "struggle" of late-night study sessions, complex thesis defenses, and the high expectations of our mentors. From the nervous excitement of our first science fair to the triumphant exhaustion of our final research presentation, every memory is anchored to the CPU campus, making our growth as scholars inseparable from the friendships that have sustained us.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PIC 3 ================= -->
+    <div id="pic3" class="lightbox">
+        <div class="box-content">
+            <a href="#" class="close-btn">&times;</a>
+
+            <div class="box-img">
+                <img src="https://i.postimg.cc/ryHThN61/558899727-1110807191263357-5396791814907420390-n.jpg">
+            </div>
+
+            <div class="box-text">
+                <h2>UNIVERSITY DAY</h2>
+                <p>
+                    University Day, or U-Day, is the vibrant heartbeat of Central Philippine University, where our peaceful campus transforms into a high-energy arena of talent, from the prestigious Mr. and Ms. CPU pageant to the explosive Street Dance and competitive ball games. The spirit of Scientia et Fides shines through in intense Academic and Literary-Musical (Lit-Mus) competitions, where Centralians strive for excellence in everything from science quizzes to oration.
+
+In a historic display of this well-rounded talent, the CPU Junior High School (JHS) cemented its legacy as the Overall Champion of the 2025 University Day.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PIC 4 ================= -->
+    <div id="pic4" class="lightbox">
+        <div class="box-content">
+            <a href="#" class="close-btn">&times;</a>
+
+            <div class="box-img">
+                <img src="https://i.postimg.cc/SK5my4sc/0102c3f3-b405-440d-98a4-f89ab8d7c67d.jpg">
+                <img src="https://i.postimg.cc/5y5JqFmv/50ddee8b-8763-43bf-aae2-6e10b7bdb11e.jpg">
+                <img src="https://i.postimg.cc/HkkmXn8M/7cc6e649-8e76-4c97-b4e2-b4ed4f96f851.jpg">
+            </div>
+
+            <div class="box-text">
+                <h2>ACADEMIC PURSUIT</h2>
+                <p>
+                    The Special Science Class (SSC) at Central Philippine University offers an accelerated and research-heavy curriculum designed to push the boundaries of our potential in Math and Science within a highly competitive academic environment. Over the course of four years, our section has transformed from a group of individual high-achievers into a resilient family, bonded by the shared intensity of late-night laboratory reports and the pressure of defending our original research projects. This journey through the rigorous SSC program, set against the peaceful backdrop of our green campus, has not only equipped us with advanced knowledge but has also forged lifelong friendships built on mutual support and a collective drive to excel.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <a href="index.html" class="back-link">← Back to Menu</a>
+
+</body>
+
+</html>

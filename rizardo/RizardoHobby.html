@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Hobbies | Erwynn Rizardo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    padding: 50px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+
+    /* Background Image + Dark Overlay */
+    background:
+        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)),
+        url('https://i.postimg.cc/1tCjbkGB/998d5320201988da916e1cc960b03047.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #cfcfcf;
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* MAIN BASKETBALL CARD */
+.main-hobby-card {
+    background: rgba(30,30,30,0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    transition: 0.3s ease;
+}
+
+.main-hobby-card:hover {
+    transform: translateY(-5px);
+}
+
+.hobby-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hobby-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.hobby-info {
+    flex: 1.2;
+    padding: 40px;
+    text-align: left;
+}
+
+.hobby-info h2 {
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Basketball Video Grid */
+.basketball-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.dance-link {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dance-link:hover {
+    background: rgba(255,255,255,0.15);
+    transform: scale(1.05);
+}
+
+/* Secondary Hobbies */
+.other-hobbies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.small-card {
+    background: rgba(30,30,30,0.75);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.small-card:hover {
+    transform: translateY(-5px);
+    background: rgba(40,40,40,0.85);
+}
+
+.small-card h3 {
+    margin-top: 0;
+}
+
+/* Back Button */
+.back-link {
+    display: inline-block;
+    margin-top: 60px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 12px 25px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.back-link:hover {
+    background: white;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .main-hobby-card { flex-direction: column; }
+    .basketball-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>MY HOBBIES & INTERESTS</h1>
+    <p class="subtitle">"Beyond the Arc"</p>
+
+    <div class="main-hobby-card">
+        <div class="hobby-image">
+            <img src="https://i.postimg.cc/xjvpSb0r/0ae10261-987d-42ef-ac81-abc52b8cfe47.jpg" alt="Basketball">
+        </div>
+
+        <div class="hobby-info">
+            <h2>BASKETBALL</h2>
+            <p><strong>Beyond the Arc: </strong> Basketball isn't just something I play. It’s where I reset, where I grow, and where I push through when things get heavy.</p>
+
+            <p style="font-size:0.85rem; color:#bbbbbb;">
+                Watch some of the best UAAP matchups:
+            </p>
+
+            <div class="basketball-grid">
+                <a href="https://www.youtube.com/watch?v=wcABlouatGM" target="_blank" class="dance-link">UP vs DLSU Finals</a>
+                <a href="https://www.youtube.com/watch?v=RxvbosAT6dc&t=620s" target="_blank" class="dance-link">DLSU vs UST Semis</a>
+                <a href="https://www.youtube.com/watch?v=yQ6Jw0FF1lo&t=356s" target="_blank" class="dance-link">NU vs UP Semis</a>
+                <a href="https://www.youtube.com/watch?v=hy0paqppPkc&t=452s" target="_blank" class="dance-link">NU vs Ateneo Quarters</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="other-hobbies">
+        <div class="small-card">
+            <h3>Museum Exploring</h3>
+            <p>I’m someone who appreciates both the energy of the court and the quiet of a gallery. Aside from playing basketball, I love spending my free time wandering through museums. There’s a unique kind of inspiration I get from studying a masterpiece that’s totally different from the adrenaline of a game, and I enjoy the shift in pace.</p>
+        </div>
+
+        <div class="small-card">
+            <h3>Playing Guitar & Singing</h3>
+            <p>In my free time, I’m often found with a guitar in hand. Whether I’m experimenting with melodies or finally mastering a song I've loved for years, playing is my creative outlet. There’s something uniquely grounding about the tactile feel of the strings and the way a good session clears my mind.</p>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Menu</a>
+</div>
+
+</body>
+</html>
