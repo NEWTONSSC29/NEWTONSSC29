@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Eun's Website!</title>
+<style>
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .box {
+    flex: 1 1 150px;
+    padding: 10px;
+    width: 300px;
+    height:25px;
+    background-color:red;
+    border: 2px solid black;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: 0.4s;
+  }
+
+  .box:hover {
+    background-color: black;
+    color: #ff4d4d;
+  }
+
+  body {
+    background-color: floralwhite;
+  }
+
+  .hobby-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .hobby-card {
+    background: floralwhite;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+  }
+
+  .full-width {
+    grid-column: span 2;
+  }
+
+  img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+</style>
+</head>
+<body>
+
+<center>
+  <h1>My Personal Website (¬‿¬ )</h1>
+  <div class="container">
+    <a href="profile.html" class="box">PROFILE?</a>
+    <a href="gallery.html" class="box">GALLERY?</a>
+    <a href="hobby.html" class="box">HOBBY?</a>
+    <a href="newtonindex.html" class="box">BACK TO SECTION WEBSITE?</a>
+  </div>
+  <hr style="height:5px;border-width:0;color:black;background-color:black">
+
+  <a href="index.html">Back to index?</a>
+  <h1>WHAT am I into?</h1>
+</center>
+
+<div class="hobby-grid">
+
+  <div class="hobby-card">
+    <h3>My favourite artist: David Bowie!</h3>
+    <p>I discovered him through tiktok, but a few Marauders fanfiction introduced me to him entirely. Diamond Dogs was one of the first few albums I discovered!</p>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/72mfhbEsMtXR6s7v9UhKe3?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <div class="hobby-card">
+    <h3>I love cats, I own 2!</h3>
+    <p>I have a siamese persian and a himalayan persian! I love them very much. I'm not sure how I became a cat person, it just came to me someday....</p>
+    <img src="https://i.pinimg.com/736x/d3/26/cc/d326ccb6fe8134983f88b579d3267ea5.jpg" alt="kitties">
+  </div>
+  
+  <hr style="height:5px;border-width:0;color:black;background-color:black">
+
+  <div class="hobby-card full-width">
+    <h3>Movies & Quotes</h3>
+    <p><i><q>Carpe Diem</q></i> - Dead Poets Society emphasizes that you must <em>seize the day!</em></p>
+    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+      <div style="flex: 1;">
+        <img src="https://i.pinimg.com/736x/4f/07/aa/4f07aa08dec172f2fd1431b29b7228c3.jpg" alt="dps">
+        <p><small>Dead Poets Society (1989)</small></p>
+      </div>
+      <div style="flex: 1;">
+        <img src="https://i.pinimg.com/736x/b0/6b/19/b06b19dc9a57c4879664e9f5db1a1ac6.jpg" alt="fam">
+        <p><small>Fantastic Mr. Fox</small></p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="hobby-card full-width">
+    <h3>Fanfiction!</h3>
+    <div class="container">
+    <p>I'm not sure how I discovered fanfiction...I was just suddenly 10 and opening Wattpad in quarantine lol.
+    But that led me to many great works created by different people. Here are my top 3 currently!  </p>
+    <a href="https://archiveofourown.org/works/26465614?view_full_work=true" class="box">Yuu and The Power of Magic</a>
+    <a href="https://archiveofourown.org/works/30652973?view_full_work=true" class="box">The Cadence of Part-time Poets</a>
+    <a href="https://archiveofourown.org/works/53966503?view_full_work=true" class="box">Partners in Death...and Life</a>
+  </div>
+
+</div>
+
+</body>
+</html>
