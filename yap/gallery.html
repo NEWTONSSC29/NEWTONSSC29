@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gallery | Kamikazee</title>
+  <style>
+    /* General Body Styling */
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-size: 22px;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f6f9;
+        color: #333;
+        text-align: center;
+    }
+
+    /* Header */
+    header {
+        background-color: #1e2a38;
+        color: white;
+        padding: 40px 20px;
+    }
+
+    header h1 {
+        font-size: 56px;
+        margin: 0;
+    }
+
+    header p {
+        font-size: 24px;
+    }
+
+    /* Navigation */
+    nav {
+        background-color: #2d3e50;
+        padding: 18px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 25px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #f39c12;
+    }
+
+    /* Section */
+    section {
+        padding: 50px 20px;
+    }
+
+    h2 {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    /* Gallery Layout */
+    .gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    /* Bigger Images */
+    .gallery img {
+        width: 320px;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        transition: transform 0.3s;
+    }
+
+    /* Hover zoom effect */
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    figcaption {
+        font-size: 20px;
+        margin-top: 12px;
+    }
+
+    /* Home Link */
+    .home-link {
+        margin-top: 40px;
+        font-size: 22px;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #1e2a38;
+        color: white;
+        padding: 25px;
+        margin-top: 50px;
+        font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kamikazee Gallery</h1>
+    <p><em>Some of my favorite albums 🎸🔥</em></p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="hobby.html">Hobby</a>
+  </nav>
+
+  <section>
+    <h2>My Music Gallery</h2>
+    <p>Here are some of my favorite Kamikazee albums that inspire my love for Filipino rock music.</p>
+
+    <div class="gallery">
+      <figure>
+        <img src="https://i.scdn.co/image/ab67616d0000b2732b8ce6fc2d59c87aafd6e157" alt="Maharot Album Cover">
+        <figcaption><strong>Maharot</strong> (2006)</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://images.genius.com/63fe00157392e921414cdbd99731ab61.640x640x1.jpg" alt="Long Time Noisy Album Cover">
+        <figcaption><strong>Long Time Noisy</strong> (2009)</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://i.scdn.co/image/ab67616d0000b27367870b90a96ef8fed898dc48" alt="Romantico Album Cover">
+        <figcaption><strong>Romantico</strong> (2012)</figcaption>
+      </figure>
+
+      </div>
+
+  </section>
+
+  <div class="home-link">
+    <a href="index.html">Back to Home</a>
+  </div>
+
+</body>
+</html>
