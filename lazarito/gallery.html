@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery | CPU JHS Life</title>
+    <style>
+        body {
+            background-color: #FFFDF0;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h1 { color: #B8860B; font-weight: 700; }
+        p.subtitle { color: #8B7355; font-style: italic; margin-bottom: 40px; }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .thumb {
+            border: 3px solid #FFD700;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 250px;
+            transition: 0.3s;
+            display: block;
+        }
+
+        .thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .thumb:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(184, 134, 11, 0.2); }
+
+        /* Lightbox logic */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox:target { display: flex; }
+
+        .box-content {
+            background: white;
+            display: flex;
+            width: 90%;
+            max-width: 950px;
+            max-height: 85vh;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box-img {
+            flex: 1.3;
+            background: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .box-img img {
+            width: 100%;
+            border-radius: 8px;
+            border: 2px solid #FFD700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+
+        .box-text {
+            flex: 1;
+            padding: 40px;
+            text-align: left;
+            background: #FFFDF0;
+            border-left: 5px solid #FFD700;
+            overflow-y: auto;
+        }
+
+        .box-text h2 { color: #B8860B; margin-top: 0; }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 35px;
+            text-decoration: none;
+            color: #4a4a4a;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 50px;
+            color: #B8860B;
+            font-weight: bold;
+            text-decoration: none;
+            border: 1px solid #B8860B;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover { background: #B8860B; color: white; }
+
+        @media (max-width: 800px) {
+            .box-content { flex-direction: column; width: 95%; }
+            .box-text { border-left: none; border-top: 5px solid #FFD700; padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>What I Like About CPU JHS</h1>
+    <p class="subtitle">Scientia et Fides: Excellence in Every Corner</p>
+
+    <div class="gallery-grid">
+        <a href="#pic1" class="thumb"><img src="https://i.postimg.cc/KcgB7Xjb/cpu.jpg" alt="Campus"></a>
+        <a href="#pic2" class="thumb"><img src="https://i.postimg.cc/SRTKFxNR/638517224-1991863975081173-5839942116124477244-n.jpg" alt="Friends"></a>
+        <a href="#pic3" class="thumb"><img src="https://i.postimg.cc/kXG4NKfj/641123712-1599551391373204-2730985197324084326-n.jpg" alt="Activities"></a>
+        <a href="#pic4" class="thumb"><img src="https://i.postimg.cc/hv6q1ztX/643578235-1582320339487094-6458145123568249704-n.jpg" alt="Education"></a>
+    </div>
+
+    <div id="pic1" class="lightbox">
+        <div class="box-content">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="box-img"><img src="https://i.postimg.cc/KcgB7Xjb/cpu.jpg"></div>
+            <div class="box-text">
+                <h2>The Campus Life</h2>
+                <p>The green and spacious campus is one of the best things about CPU. It provides a peaceful environment that helps us focus on our studies while enjoying the beauty of nature.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="pic2" class="lightbox">
+        <div class="box-content">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="box-img">
+                <img src="https://i.postimg.cc/SRTKFxNR/638517224-1991863975081173-5839942116124477244-n.jpg">
+                <img src="https://i.postimg.cc/v83T63Lc/641398153-892221793615519-4015659343599605864-n.jpg">
+            </div>
+            <div class="box-text">
+                <h2>The Central Spirit</h2>
+                <p>One of the most unique things about CPU JHS is the diversity. I've managed to make friends not only within my own department but even from other countries through culture exchange programs!</p>
+                <p>Learning about different perspectives while sharing the same Central Spirit is something I truly value.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="pic3" class="lightbox">
+        <div class="box-content">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="box-img"><img src="https://i.postimg.cc/kXG4NKfj/641123712-1599551391373204-2730985197324084326-n.jpg"></div>
+            <div class="box-text">
+                <h2>School Activities</h2>
+                <p>Life in CPU JHS is never boring. Whether it's Intramurals, University Day, or special classroom activities, there are always opportunities to participate and show our talents.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="pic4" class="lightbox">
+        <div class="box-content">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="box-img">
+                <img src="https://i.postimg.cc/hv6q1ztX/643578235-1582320339487094-6458145123568249704-n.jpg">
+                <img src="https://i.postimg.cc/0NnRHHNG/637793424-780865028404153-8987195049908774734-n.jpg">
+                <img src="https://i.postimg.cc/Nfn0dFzN/641312553-1428317462037886-2885356435682778294-n.jpg">
+            </div>
+            <div class="box-text">
+                <h2>Academic Journey</h2>
+                <p>Being part of the Special Science Class (SSC) challenges me every day. These photos show our journey in learning and how the school provides the best environment for us to excel in Math, Science, and beyond.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <a href="index.html" class="back-link">← Back to Menu</a>
+
+</body>
+</html>
