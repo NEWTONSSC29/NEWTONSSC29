@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Personal Website</title>
+
+<style>
+body{
+    text-align:center;
+    background: linear-gradient(to right, #FC94AF, #BE93D4, #AF69EF, lightblue);
+    font-family: "Trebuchet MS", cursive, sans-serif;
+    margin: 0;
+    padding: 40px;
+    overflow-x: hidden;
+}
+
+h1{
+    color: white;
+    font-size: 40px;
+    text-shadow: 5px 5px 10px #c71585;
+}
+
+.subtitle{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.intro{
+    color:white;
+    max-width:600px;
+    margin:0 auto 30px;
+    font-size:18px;
+    line-height:1.6;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.box {
+    flex: 1 1 200px;
+    max-width: 220px;
+    background-color: #BF7EE5;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, background-color 0.3s;
+    position: relative;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+    background-color: #e6ccff;
+}
+
+.box a {
+    text-decoration: none;
+    color: lavender;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.box a:hover {
+    color: #c71585;
+}
+
+.decoration {
+    position: absolute;
+    transition: transform 0.3s;
+}
+
+.profile-img { left:-35px; top:-45px; width:50px; }
+.gallery-img { right:-20px; top:40px; width:70px; }
+.hobby-img { left:-30px; top:-5px; width:80px; }
+.back-img { right:10px; top:5px; width:30px; }
+
+.box:hover .profile-img { transform: translateX(10px) rotate(10deg) scale(1.2); }
+.box:hover .gallery-img { transform: translateX(-10px) rotate(-10deg) scale(1.2); }
+.box:hover .hobby-img { transform: translateX(10px) rotate(10deg) scale(1.2); }
+.box:hover .back-img { transform: translateX(-10px) rotate(-10deg) scale(1.2); }
+
+.background-shape {
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.shape1 {
+    width: 300px;
+    height: 300px;
+    background: white;
+    top: 100px;
+    left: -100px;
+}
+
+.shape2 {
+    width: 250px;
+    height: 250px;
+    background: #ffccff;
+    bottom: 80px;
+    right: -80px;
+}
+
+.floating {
+    position: fixed;
+    font-size: 30px;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+.section {
+    margin-top: 70px;
+    color: white;
+}
+
+.footer{
+    margin-top:70px;
+    color:white;
+}
+.footer p{
+    font-size:14px;
+    opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="background-shape shape1"></div>
+<div class="background-shape shape2"></div>
+
+<div class="floating" style="left:40px; top:300px;">🦋</div>
+<div class="floating" style="right:50px; top:400px;">🌸</div>
+
+<h1>My Personal Website</h1>
+<p class="subtitle">Welcome! Click a section below to explore more about me 💕</p>
+
+<div class="intro">
+    <p>
+        Hi! I'm Richie 💕  
+        I love my photography, pikachu, and you🫶.  
+        This is my little space on the internet where you can explore more about me! 
+    </p>
+</div>
+
+<hr style="width:60%; border:1px solid white; margin:30px auto;">
+
+<div class="container">
+    <div class="box">
+        <a href="profile.html">Profile</a>
+        <img src="https://pngfre.com/wp-content/uploads/butterfly-4.png" class="decoration profile-img">
+    </div>
+
+    <div class="box">
+        <a href="gallery.html">Gallery</a>
+        <img src="https://www.freeiconspng.com/uploads/vintage-camera-png-images-for--camera-png--23.png" class="decoration gallery-img">
+    </div>
+
+    <div class="box">
+        <a href="hobby.html">Hobby</a>
+        <img src="https://pngimg.com/d/pikachu_PNG17.png" class="decoration hobby-img">
+    </div>
+
+    <div class="box">
+        <a href="newtonindex.html">Back to Section Website</a>
+        <img src="https://freepngimg.com/thumb/heart/3-2-heart-png-picture.png" class="decoration back-img">
+    </div>
+</div>
+
+<div class="section">
+    <h2>💖 Do You Really Know Me?</h2>
+
+    <p>1. What is my favorite color?</p>
+    <input type="radio" name="q1" value="pink"> Pink<br>
+    <input type="radio" name="q1" value="blue"> Blue<br>
+    <input type="radio" name="q1" value="purple"> Purple<br><br>
+
+    <p>2. What do I enjoy the most?</p>
+    <input type="radio" name="q2" value="watch"> Watchiing movies<br>
+    <input type="radio" name="q2" value="sports"> Sports<br>
+    <input type="radio" name="q2" value="sleep"> Sleeping all day<br><br>
+
+    <p>3. What is my favorite animal?</p>
+    <input type="radio" name="q3" value="cat"> Cats<br>
+    <input type="radio" name="q3" value="dog"> Dogs<br>
+    <input type="radio" name="q3" value="bird"> Chicken<br><br>
+
+    <button onclick="checkQuiz()" 
+        style="padding:10px 20px; border:none; border-radius:10px; background:#c71585; color:white; font-weight:bold;">
+        Submit
+    </button>
+
+    <p id="result" style="margin-top:20px; font-size:18px;"></p>
+</div>
+
+<div class="section">
+    <h2>💌 Contact Me</h2>
+    <p>Email: richielannarceo@gmail.com</p>
+    <p>Instagram: @riri.chiel</p>
+</div>
+
+<!-- Back to Top Button -->
+<div style="margin-top:40px;">
+    <button onclick="window.scrollTo({top:0, behavior:'smooth'});" 
+        style="padding:12px 25px; border:none; border-radius:12px; 
+               background:#c71585; color:white; font-weight:bold; font-size:16px; cursor:pointer;">
+        ⬆️ Back to Top
+    </button>
+</div>
+
+<div class="footer">
+    <h3>Thanks for Visiting 💕</h3>
+    <p>Follow my journey and explore my creative world!</p>
+    <p>© 2026 Richie | All Rights Reserved</p>
+</div>
+
+<script>
+function checkQuiz() {
+    let q1 = document.querySelector('input[name="q1"]:checked');
+    let q2 = document.querySelector('input[name="q2"]:checked');
+    let q3 = document.querySelector('input[name="q3"]:checked');
+
+    if (!q1 || !q2 || !q3) {
+        document.getElementById("result").innerHTML =
+        "Please answer all questions first 💕";
+        return;
+    }
+
+    let score = 0;
+
+    if (q1.value === "purple") score++;
+    if (q2.value === "sleep") score++;
+    if (q3.value === "dog") score++;
+
+    if (score === 3) {
+        document.getElementById("result").innerHTML =
+        "OMG you know me PERFECTLY!! 💖✨";
+    } else if (score === 2) {
+        document.getElementById("result").innerHTML =
+        "Almost there! You know me pretty well 😌";
+    } else {
+        document.getElementById("result").innerHTML =
+        "Hmm… you need to know me better 😭💔";
+    }
+}
+</script>
+
+</body>
+</html>
