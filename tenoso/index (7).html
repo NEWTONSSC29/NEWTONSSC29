@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Aesthetic Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        html {
+            background-color: #ffe4e1;
+            background-image: radial-gradient(#ffffff 1px, transparent 1px);
+            background-size: 30px 30px;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            animation: fadeInPage 1.5s ease-out;
+            padding: 20px;
+        }
+
+        /* Polaroid Image Frame */
+        .photo-frame {
+            background: white;
+            padding: 15px 15px 40px 15px; /* Thicker bottom like a real polaroid */
+            border-radius: 5px;
+            box-shadow: 0 10px 25px rgba(139, 94, 94, 0.15);
+            margin-bottom: 25px;
+            transform: rotate(-2deg); /* Slight tilt for that "messy-cute" look */
+            transition: 0.5s;
+        }
+
+        .photo-frame:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        .photo-frame img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover; /* Keeps the photo from stretching */
+            border: 1px solid #f8f8f8;
+        }
+
+        header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.2rem;
+            color: #8b5e5e; 
+            margin: 0 0 30px 0;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .box {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 35px 10px;
+            text-align: center;
+            font-weight: 700;
+            color: #8b5e5e;
+            text-decoration: none;
+            transition: 0.3s;
+            border: 1px solid #f8d7da;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            background-color: #fffafa;
+            color: #ffb6c1;
+            border-color: #ffb6c1;
+        }
+
+        #music-control {
+            position: fixed;
+            bottom: 20px; right: 20px;
+            background: white; border: 1px solid #8b5e5e;
+            padding: 8px 12px; border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Quicksand', sans-serif;
+            color: #8b5e5e;
+        }
+        
+}
+    </style>
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="photo-frame">
+        <img src="kamisamakiss.jpg" alt="❤">
+    </div>
+
+    <header>
+        <h1>welcome to my website</h1>
+    </header>
+
+    
+    <div class="container">
+        <a href="profile.html" class="box">Profile</a>
+        <a href="hobbies.html" class="box">Hobbies</a>
+        <a href="gallery.html" class="box">Gallery</a>
+        <a href="#" class="box back-btn">Back to Section Website</a>
+
+    <button id="music-control" onclick="toggleMusic()">♫ play music</button>
+
+    <script>
+        const music = document.getElementById('bg-music');
+        function startMusic() { music.play(); }
+        function toggleMusic() {
+            if (music.paused) { music.play(); } else { music.pause(); }
+        }
+    </script>
+</body>
+</html>
