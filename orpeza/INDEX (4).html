@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Website</title>
+
+<style>
+
+section {
+  float: right;
+  width: 250px;
+  background: #000000;
+  padding: 10px;
+  margin: 0px;
+  border-radius: 10px;
+}
+
+aside {
+  float: top right;
+  width: 250px;
+  background: #000000;
+  padding: 10px;
+  margin: 0px;
+  border-radius: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;  
+  align-items: flex-start;  
+  gap: 20px;                
+  flex-wrap: wrap;          
+}
+
+.fade-in {
+  animation: fade 2s ease-in;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+ul {
+    color: white;
+}
+
+hr {
+    color: black;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #fefefe;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.nav {
+    margin: 20px 0;
+}
+
+.nav a {
+    box-shadow: 3px 3px 10px silver;
+    background-color: black;
+    color: silver;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-weight: bold;
+    margin: 0 10px;
+    
+    /* Smooth animation for lifting */
+    transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+
+
+.nav a:hover {
+    color: gold;
+
+    /* Lift upward */
+    transform: translateY(-8px);
+
+    /* Stronger shadow to match the "lift" */
+    box-shadow: 6px 6px 15px silver;
+    
+    padding: 17px 31px;
+}
+
+.highlight {
+    background-color: silver;
+    height: 50px;
+    margin: 35px 0;
+}
+
+iframe {
+    width: 560px;
+    height: 315px;
+    border: none;
+}
+
+body {
+  animation: gradient 8s infinite alternate;
+  background: linear-gradient(45deg, #C4C4C4, #000000, #C4C4C4);
+  background-size: 400% 400%;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+    
+</style>
+
+</head>
+
+<body>
+
+<h1 class= "fade-in">Welcome to My Website</h1>
+
+<div class="nav">
+    <a href="profile.html">PROFILE</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="hobby.html">HOBBY</a>
+</div>
+
+<div class="highlight"></div>
+
+<h2 style="color: white;">Character Sheet</h2>
+
+<div class="row">
+<section  class= "fade-in">
+<p style="color: white;"> <b> Brief overview: </b></p>
+<ul>
+    <li>Book enthusiast</li>
+    <li>Passionate</li>
+    <li>Chill</li>
+</ul>
+</section>
+
+<video width="500" height="325" controls style="border: 10px solid black;">
+    <source src="v1.mp4" type="video/mp4">
+</video>
+
+<aside  class= "fade-in">
+<h2 style="color: white;"> <b> Cassandra Joyce E. Orpeza </b></h2>
+<ul>
+    <li>10 SSC</li>
+    <li>Class President</li>
+    <li>STUCO Asst. Secretary</li>
+</ul> 
+<b><p style="color: white;">
+ Learn more about this character by pressing on:
+</b></p>
+<ul style="list-style-type: none;">
+    <li>Profile – view character's details</li>
+    <li>Gallery – view character's memories</li>
+    <li>Hobbies – view character's daily activities</li>
+</ul>
+</aside>
+</div>
+<hr>
+
+<h2 style="color: white;">Character's Song: Loud</h2>
+
+<audio autoplay loop hidden>
+    <source src="Loud.mp3" type="audio/mpeg">
+</audio>
+
+<hr>
+
+</body>
+</html>
